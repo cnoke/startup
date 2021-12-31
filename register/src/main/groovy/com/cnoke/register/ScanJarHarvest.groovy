@@ -1,4 +1,4 @@
-package com.conke.register
+package com.cnoke.register
 /**
  * 已扫描到接口或者codeInsertToClassName jar的信息
  * @author zhangkb

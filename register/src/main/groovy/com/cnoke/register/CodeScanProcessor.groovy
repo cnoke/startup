@@ -1,4 +1,4 @@
-package com.conke.register
+package com.cnoke.register
 
 
 import org.objectweb.asm.ClassReader

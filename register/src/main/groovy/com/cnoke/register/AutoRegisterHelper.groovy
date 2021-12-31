@@ -1,4 +1,4 @@
-package com.conke.register
+package com.cnoke.register
 
 import com.google.gson.Gson
 import org.gradle.api.Project
@@ -12,7 +12,7 @@ import static com.android.builder.model.AndroidProject.FD_INTERMEDIATES
  * @since 2018/04/13
  */
 class AutoRegisterHelper {
-    final static def CACHE_INFO_DIR = "auto-register"
+    final static def CACHE_INFO_DIR = "startup-register"
 
     /**
      * 缓存自动注册配置的文件

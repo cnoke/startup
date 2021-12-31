@@ -2,3 +2,4 @@ rootProject.name = "Startup"
 include ':app'
 include ':register'
 include ':startup'
+include ':test1'

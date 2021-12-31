@@ -1,4 +1,4 @@
-package com.conke.register
+package com.cnoke.register
 
 
 import org.gradle.api.Project
@@ -75,10 +75,10 @@ class AutoRegisterConfig {
             def info = registerInfo.text
             sameInfo = info == listInfo
             if (!sameInfo) {
-                project.logger.error("auto-register registerInfo has been changed since project(':$project.name') last build")
+                project.logger.error("startup-register registerInfo has been changed since project(':$project.name') last build")
             }
         } else {
-            project.logger.error('auto-register read registerInfo error--------')
+            project.logger.error('startup-register read registerInfo error--------')
         }
         if (!sameInfo) {
             deleteFile(AutoRegisterHelper.getRegisterCacheFile(project))
@@ -86,7 +86,7 @@ class AutoRegisterConfig {
         if (registerInfo.canWrite()) {
             registerInfo.write(listInfo)
         } else {
-            project.logger.error('auto-register write registerInfo error--------')
+            project.logger.error('startup-register write registerInfo error--------')
         }
     }
 

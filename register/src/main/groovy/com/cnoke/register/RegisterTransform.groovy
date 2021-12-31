@@ -1,4 +1,4 @@
-package com.conke.register
+package com.cnoke.register
 
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
@@ -25,7 +25,7 @@ class RegisterTransform extends Transform {
 
     @Override
     String getName() {
-        return "auto-register"
+        return "startup-register"
     }
 
     @Override
@@ -52,7 +52,7 @@ class RegisterTransform extends Transform {
                    , Collection<TransformInput> referencedInputs
                    , TransformOutputProvider outputProvider
                    , boolean isIncremental) throws IOException, TransformException, InterruptedException {
-        project.logger.warn("start auto-register transform...")
+        project.logger.warn("start startup-register transform...")
         config.reset()
         project.logger.warn(config.toString())
         def clearCache = !isIncremental
@@ -66,7 +66,7 @@ class RegisterTransform extends Transform {
 
 
         def cacheEnabled = config.cacheEnabled
-        println("auto-register-----------isIncremental:${isIncremental}--------config.cacheEnabled:${cacheEnabled}--------------------\n")
+        println("startup-register-----------isIncremental:${isIncremental}--------config.cacheEnabled:${cacheEnabled}--------------------\n")
 
         File jarManagerfile = null
         Map<String, ScanJarHarvest> cacheMap = null
@@ -118,7 +118,7 @@ class RegisterTransform extends Transform {
                 long scanTime = System.currentTimeMillis();
                 // 处理完后拷到目标文件
                 FileUtils.copyDirectory(directoryInput.file, dest)
-                println "auto-register cost time: ${System.currentTimeMillis() - dirTime}, scan time: ${scanTime - dirTime}. path=${root}"
+                println "startup-register cost time: ${System.currentTimeMillis() - dirTime}, scan time: ${scanTime - dirTime}. path=${root}"
             }
         }
 
@@ -165,8 +165,8 @@ class RegisterTransform extends Transform {
             //不需要执行文件复制，直接返回
             return
         }
-        println "auto-register cost time: " + (System.currentTimeMillis() - time) + " ms to scan jar file:" + dest.absolutePath
-        //复制jar文件到transform目录：build/transforms/auto-register/
+        println "startup-register cost time: " + (System.currentTimeMillis() - time) + " ms to scan jar file:" + dest.absolutePath
+        //复制jar文件到transform目录：build/transforms/startup-register/
         FileUtils.copyFile(src, dest)
     }
 
