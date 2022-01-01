@@ -22,7 +22,11 @@ Android很多项目用到组件化。但是组件化项目，每个组件想要�
 
 无需反射，无需注解。编译器自动将model中的实例注册到app中。方便快捷
 
-## 3.使用方式
+## 3.源码地址
+
+[GitHub](https://github.com/cnoke/startup)
+
+## 4.使用方式
 
 #### 添加依赖
 
@@ -161,6 +165,6 @@ open class StartUpApplication : Application() {
 }
 ```
 
-![startup.gif](https://gitee.com/cnoke_301/readmeimg/raw/master/replacefilename-studio-plugin/startup.gif)
+![startup.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e83c6437fe5c40a3bb7b5cafc521239d~tplv-k3u1fbpfcp-zoom-1.image)
 
 可以看到Test1和Test2中的类在application启动时候都被调用了
