@@ -42,6 +42,7 @@ dependencies {
     implementation AndroidX.coreKtx
     implementation AndroidX.constraintlayout
     implementation AndroidX.material
-    implementation project(":startup")
+    implementation "io.github.cnoke.startup:api:1.0-SNAPSHOT"
     implementation project(":test1")
+    implementation project(":test2")
 }

@@ -11,13 +11,16 @@ import com.cnoke.startup.application.IApplication
  * @title
  * @describe
  */
-open class ModelAPP private constructor(): IApplication{
+class Test1 private constructor(): IApplication{
 
+    /**
+     * 必须用此方法实现单例。否则工程会报错
+     */
     companion object {
         val instance: IApplication by lazy {
-            ModelAPP()
+            Test1()
         }
-        const val TAG = "ModelAPP"
+        const val TAG = "Test1"
     }
 
     override fun attachBaseContext(context: Context) {
