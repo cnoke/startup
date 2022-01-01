@@ -161,6 +161,6 @@ open class StartUpApplication : Application() {
 }
 ```
 
-![](https://gitee.com/cnoke_301/readmeimg/raw/master/replacefilename-studio-plugin/startup.gif)
+![startup.gif](https://gitee.com/cnoke_301/readmeimg/raw/master/replacefilename-studio-plugin/startup.gif)
 
 可以看到Test1和Test2中的类在application启动时候都被调用了
