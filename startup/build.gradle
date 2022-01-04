@@ -30,6 +30,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 协程基础库
+    compileOnly Kt.coroutineCore
+    compileOnly Kt.coroutineAndroid
 }
 
 apply from: rootProject.file('gradle/maven_push.gradle')

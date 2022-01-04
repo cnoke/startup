@@ -168,3 +168,7 @@ open class StartUpApplication : Application() {
 ![startup.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e83c6437fe5c40a3bb7b5cafc521239d~tplv-k3u1fbpfcp-zoom-1.image)
 
 可以看到Test1和Test2中的类在application启动时候都被调用了
+
+ASM 基于[AutoRegister](https://github.com/luckybilly/AutoRegister.git)修改。在此感谢AutoRegister作者的分享
+
+

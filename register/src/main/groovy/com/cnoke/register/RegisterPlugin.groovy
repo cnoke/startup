@@ -44,6 +44,15 @@ public class RegisterPlugin implements Plugin<Project> {
             startup.(AutoRegisterConfig.REGISTER_METHOD_NAME) = "register"
             startup.(AutoRegisterConfig.IS_INSTANCE) = true
             config.registerInfo.add(startup)
+
+            Map<String, Object> initTask = [:]
+            initTask.(AutoRegisterConfig.INTERFACE_NAME) = "com.cnoke.startup.task.InitTask"
+            initTask.(AutoRegisterConfig.INSERT_TO_CLASS_NAME) = "com.cnoke.startup.FinalTaskRegister"
+            initTask.(AutoRegisterConfig.INSERT_TO_METHOD_NAME) = "init"
+            initTask.(AutoRegisterConfig.REGISTER_CLASS_NAME) = "com.cnoke.startup.FinalTaskRegister"
+            initTask.(AutoRegisterConfig.REGISTER_METHOD_NAME) = "register"
+            initTask.(AutoRegisterConfig.IS_INSTANCE) = false
+            config.registerInfo.add(initTask)
         }
         config.project = project
         config.convertConfig()
