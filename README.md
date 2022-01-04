@@ -171,4 +171,6 @@ open class StartUpApplication : Application() {
 
 ASM 基于[AutoRegister](https://github.com/luckybilly/AutoRegister.git)修改。在此感谢AutoRegister作者的分享
 
+## 5.Application 启动组件（异步初始化第三方SDK）
+[README](https://github.com/cnoke/startup/blob/main/INIT_TASK_README.md)
 
