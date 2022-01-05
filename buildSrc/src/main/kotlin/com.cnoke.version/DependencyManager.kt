@@ -30,3 +30,7 @@ object Kt {
     val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutine}"
     val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine}"
 }
+
+object Depend{
+    val startupApi = "io.github.cnoke.startup:api:1.1.0"
+}

@@ -30,12 +30,10 @@ Startup是基于Kotlin协程编写的启动框架。框架支持
 
 ```groovy
 repositories {
-  maven{ 
-     url "https://s01.oss.sonatype.org/service/local/repositories/snapshots/content"
-  }
+    mavenCentral()
 }
 dependencies {
-    classpath 'io.github.cnoke.startup:register:1.0-SNAPSHOT'
+    classpath 'io.github.cnoke.startup:register:1.1.0'
 }
 ```
 
@@ -54,7 +52,7 @@ plugins {
 
 ```groovy
 dependencies {
-    implementation "io.github.cnoke.startup:api:1.0-SNAPSHOT"
+    implementation "io.github.cnoke.startup:api:1.1.0"
     //或者base模块build.gradle 用api引入，这样所有模块都能使用
     //api "io.github.cnoke.startup:api:1.0-SNAPSHOT"
 }
