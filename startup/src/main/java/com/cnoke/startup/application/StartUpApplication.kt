@@ -44,8 +44,4 @@ open class StartUpApplication : Application() {
         super.onTrimMemory(level)
         appRegister.onTrimMemory(level)
     }
-
-    fun initDefaultTask(){
-        appRegister.defaultTask()
-    }
 }

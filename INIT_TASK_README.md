@@ -33,7 +33,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    classpath 'io.github.cnoke.startup:register:1.1.0'
+    classpath 'io.github.cnoke.startup:register:1.1.2'
 }
 ```
 
@@ -52,9 +52,9 @@ plugins {
 
 ```groovy
 dependencies {
-    implementation "io.github.cnoke.startup:api:1.1.0"
+    implementation "io.github.cnoke.startup:api:1.1.2"
     //或者base模块build.gradle 用api引入，这样所有模块都能使用
-    //api "io.github.cnoke.startup:api:1.0-SNAPSHOT"
+    //api "io.github.cnoke.startup:api:1.1.2"
 }
 ```
 

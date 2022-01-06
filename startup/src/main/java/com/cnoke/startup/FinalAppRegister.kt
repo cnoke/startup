@@ -60,10 +60,4 @@ internal class FinalAppRegister{
             it.onConfigurationChanged(newConfig)
         }
     }
-
-    fun defaultTask() {
-        applist.forEach {
-            it.defaultTask()
-        }
-    }
 }

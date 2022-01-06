@@ -16,7 +16,4 @@ open interface IApplication {
     fun onTrimMemory(level: Int)
 
     fun onConfigurationChanged(newConfig: Configuration)
-
-    fun defaultTask()
-
 }

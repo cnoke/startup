@@ -37,7 +37,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    classpath 'io.github.cnoke.startup:register:1.1.0'
+    classpath 'io.github.cnoke.startup:register:1.1.2'
 }
 ```
 
@@ -56,9 +56,9 @@ plugins {
 
 ```groovy
 dependencies {
-    implementation "io.github.cnoke.startup:api:1.1.0"
+    implementation "io.github.cnoke.startup:api:1.1.2"
     //或者base模块build.gradle 用api引入，这样所以模块都能使用
-    //api "io.github.cnoke.startup:api:1.0-SNAPSHOT"
+    //api "io.github.cnoke.startup:api:1.1.2"
 }
 ```
 
@@ -80,7 +80,7 @@ open class Test1 private constructor(): IApplication{
      * 必须用此方法实现单例。否则工程会报错
      */
     companion object {
-        val instance: IApplication by lazy {
+        val instance: Test1 by lazy {
             Test1()
         }
         const val TAG = "test1"
@@ -108,10 +108,6 @@ open class Test1 private constructor(): IApplication{
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         Log.e(TAG,"onConfigurationChanged")
-    }
-
-    override fun defaultTask() {
-        Log.e(TAG,"defaultTask")
     }
 }
 ```
