@@ -16,6 +16,10 @@ internal class FinalTaskRegister {
         init()
     }
 
+    /**
+     * 用于代码插入。会以register(TestTask())格式插入到init中，
+     * 最终所有实现initTask的接口的类都会被收集到taskList中
+     */
     private fun init() {
     }
 

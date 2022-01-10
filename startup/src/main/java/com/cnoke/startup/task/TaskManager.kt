@@ -155,7 +155,7 @@ internal class TaskManager private constructor(
         }
         if (ThreadUtils.isInMainThread()) {
             // 如果是主线程，先将异步任务放入队列，再执行同步任务
-            allowTasks.sortedWith(AnchorComparator()).filter { it.background }.forEach {
+            allowTasks.filter { it.background }.sortedWith(AnchorComparator()).forEach {
                 launchTask(it)
             }
             allowTasks.filter { it.background.not() }.sortedWith(AnchorComparator()).forEach { execute(it) }
