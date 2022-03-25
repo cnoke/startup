@@ -148,7 +148,7 @@ class CodeInsertProcessor {
                         //用kotlin单例创建一个组件实例
                         String companion = name + "\$Companion"
                         mv.visitFieldInsn(Opcodes.GETSTATIC, name, "Companion", "L${companion};")
-                        mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, companion, "getInstance", "()L${name};", false)
+                        mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, companion, "getInstance", "()L${extension.interfaceName};", false)
                     }else{
                         //用无参构造方法创建一个组件实例
                         mv.visitTypeInsn(Opcodes.NEW, name)
