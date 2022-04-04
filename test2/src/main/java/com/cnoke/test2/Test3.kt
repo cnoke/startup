@@ -17,7 +17,7 @@ class Test2 private constructor(): IApplication{
      * 必须用此方法实现单例。否则工程会报错
      */
     companion object {
-        val instance: IApplication by lazy {
+        val instance: Test2 by lazy {
             Test2()
         }
         const val TAG = "Test2"
